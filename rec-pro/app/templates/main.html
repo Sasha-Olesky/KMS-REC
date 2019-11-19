@@ -1,0 +1,70 @@
+<div class="tabs-left" ng-controller="MainCtrl">
+  <ul class="nav nav-tabs tab-left-back" style="position: absolute; height: 100%; width: 7%;">
+     <li class="tab-li" style="margin-top: 50px;" ng-class="getTabClass(1)" ng-click="setActiveTab(1)">
+        <div>
+          <img ng-src="assets/img/add_video.png" class="img-icon"></img>
+          <p style="text-align: center; color: #EEE">Add Video</p>
+        </div>
+      </li>
+     <li class="tab-li" ng-class="getTabClass(2)" ng-click="setActiveTab(2)">
+        <div ng-click="">
+          <img ng-src="assets/img/search.png" class="img-icon"></img>
+          <p style="text-align: center; color: #EEE">Search</p>
+        </div>
+      </li>
+     <li class="tab-li" ng-class="getTabClass(3)" ng-click="setActiveTab(3)">
+        <div ng-click="">
+          <img ng-src="assets/img/setting.png" class="img-icon"></img>
+          <p style="text-align: center; color: #EEE">Settins</p>
+        </div>
+      </li>
+     <li class="tab-li" ng-class="getTabClass(4)" ng-click="setActiveTab(4)">
+        <div ng-click="">
+          <img ng-src="assets/img/account.png" class="img-icon"></img>
+          <p style="text-align: center; color: #EEE">Account</p>
+        </div>
+      </li>
+  </ul>
+
+  <div style="position: absolute; background: #0071BF; height: 100%; width: 21.5%; margin-left: 6.9%; padding: 20px;" >
+      <p class="p-title">Menu</p>
+      <!-- under ling -->
+      <div class="div-underline" style="margin-top: -20px;"></div>
+      
+      <!-- menu content -->
+      <div ng-show="tabIndicator==1?1:0" style="margin-top: 40px;">    
+        
+      </div>       
+    
+      <div ng-show="tabIndicator==2?1:0" style="margin-top: 40px;">     
+        
+      </div>
+      
+      <div ng-show="tabIndicator==3?1:0" style="margin-top: 40px;">     
+        
+      </div>
+      
+      <div ng-show="tabIndicator==4?1:0" style="margin-top: 40px;">     
+        <button class="form-button" ng-click="logoutAction()">log out</button>  
+      </div> 
+
+  </div>
+  <div class="tab-content" style="position: absolute; margin-left: 29%">
+    <div ng-show="tabIndicator==1?1:0" id="deal" class="content">    
+        {{tab1}}
+     </div>       
+    
+    <div ng-show="tabIndicator==2?1:0" id="bond" class="content">     
+      {{tab2}}
+    </div>
+    
+    <div ng-show="tabIndicator==3?1:0" id="collateral" class="content">     
+      {{tab3}}
+    </div>
+    
+    <div ng-show="tabIndicator==4?1:0" id="rating" class="content">     
+      {{tab4}}
+    </div>      
+  
+  </div>
+</div>

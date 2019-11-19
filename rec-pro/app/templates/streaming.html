@@ -1,0 +1,47 @@
+<div class="container" ng-controller="StreamCtrl">  
+    <div class="row">
+         <div class="col-md-5">
+              <h3>Recorded Stream Videos</h3>
+              <video id="videoInput" autoplay width="480px" height="360px"
+                                poster="assets/img/webrtc.png" style="display: none;"></video>
+
+              <!-- recorded list of videos -->
+              <br>
+              <div class="video-list">
+                   <ul style="list-style-type:none">
+                        <li ng-repeat=" item in videoList track by $index" >
+                              <a ng-click="playVideo(item)">{{ item }}</a>
+                        </li>
+                   </ul>
+               </div>
+         </div>
+	 <div class="col-md-2">
+               <a class="btn btn-success" ng-click="startRecording()"> <span class="glyphicon glyphicon-play"></span> Start </a> 
+	       <br /> <br /> 
+	       <a class="btn btn-danger" ng-click="stopRecordAndPlay()"> <span
+                                        class="glyphicon glyphicon-stop"></span> Stop
+                                </a> <br /> <br /><!-- <a id="play" href="#" class="btn btn-warning"> <span
+                                        class="glyphicon glyphicon-play"></span> Play
+                                </a> -->
+         </div>
+         <div class="col-md-5">
+               <h3>Remote stream</h3>
+               <video id="videoOutput" autoplay width="480px" height="360px"
+                                        poster="assets/img/webrtc.png"></video>
+         </div>
+    </div>
+
+    <div class="row">
+         <div class="col-md-12">
+              <label class="control-label" for="console">Console</label><br>
+              <br>
+              <div id="console" class="democonsole">
+                   <ul></ul>
+              </div>
+
+         </div>
+    </div>
+
+</div>
+
+

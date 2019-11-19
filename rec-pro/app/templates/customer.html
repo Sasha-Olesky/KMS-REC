@@ -1,0 +1,19 @@
+<h3 ng-show="welcome">Bem-vindo, <b class="light-red">{{ user.name }}</b></h3>
+
+<button ng-show="!logged" ng-disabled="!facebookReady" ng-click="IntentLogin()">Conectar com o Facebook</button>
+
+<button ng-show="logged" ng-disabled="!facebookReady" ng-click="logout()">Sair</button>
+
+<div class="filter" ng-show="logged">
+    <h3>Filtrar por nome</h3>
+    <p><input type="text" ng-model="filter.name" placeholder="Busque contatos pelo nome" /></p>
+
+    <ul class="customer-cards">
+        <li ng-repeat="friend in friends.data | filter:filter.name" style="background: url(http://graph.facebook.com/{{ friend.id }}/picture?type=large) no-repeat center center; background-size: 100% auto;">
+            <p>
+                {{ friend.name }}
+                <!-- <br /><small class="light">{{ friend.location }}</small> -->
+            </p>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,64 @@
+<div ng-controller="LoginCtrl" >
+<div class="login-page" style="margin-right: 100px;" >
+  <div class="form">
+    <form class="register-form">
+      <div id="register_first" ng-show="registerFlag">
+        <input type="text" placeholder="name" ng-model="setName"/>
+        <p ng-show="setName==''?1:0" class="require-warning" style="float: left; color: #FF0000;">user name is required</p>
+
+        <input type="email" placeholder="email address" ng-model="setEmail"/>
+        <p ng-show="setEmail==''?1:0" class="require-warning" style="float: left; color: #FF0000;">user email is required</p>
+
+        <input type="text" placeholder="phone number" ng-model="userPhone"/>
+        <p ng-show="userPhone==''?1:0" class="require-warning" style="float: left; color: #FF0000;">phone number is required</p>
+
+        <button class="form-button" ng-click="registerFirst()">continue</button>
+        <p class="message">Already registered? <a ng-click="siginBtn(false)">Sign In</a></p>
+      </div>
+      <div id="register_last" ng-show="!registerFlag">
+        <input type="password" placeholder="password" ng-model="setPw"/>
+        <p ng-show="setPw==''?1:0" class="require-warning" style="float: left; color: #FF0000;">password is required</p>
+        <input type="password" placeholder="confirm password" ng-model="ConfirmPw"/>  
+        <p ng-show="pwConfirmed" class="require-warning" style="float: left; color: #FF0000;">password is not correct!</p>
+        <button class="form-button" ng-click="registerLast()">create</button>
+        <p class="message">Already registered? <a ng-click="siginBtn(false)">Sign In</a></p>
+      </div>
+    </form>
+    <form class="login-form">
+      <div> 
+          <!-- google button -->
+          <div style="float: left;" class="g-signin2" data-onsuccess="onSignIn"></div>
+          
+          <script>
+              (function() {
+                  var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                  po.src = 'https://apis.google.com/js/client:plusone.js';
+                  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+  
+          </script>
+
+        
+          <!-- facebook button -->
+          <button class="loginBtn loginBtn--facebook" style="float: right;" ng-click="facebooklogin()">
+            Login with Facebook
+          </button>
+      </div>
+      
+      <input type="email" placeholder="user email" ng-model="userEmail" style="margin-top: 15px;"/>
+      <p ng-show="userEmail==''?1:0" class="require-warning" style="float: left; color: #FF0000;">user email is required</p>
+      
+      <input type="password" placeholder="password" ng-model="userPw"/>
+      <p ng-show="userPw==''?1:0" class="require-warning" style="float: left; color: #FF0000;">user password is required</p>
+      
+      <button class="form-button" ng-click="loginAction()">login</button>
+      <p class="message">Not registered? <a ng-click="siginBtn(true)">Create an account</a></p>
+
+    </form>
+  </div>
+
+</div>
+  <div style="position: absolute; float: right; width: 60%; height: 100%;">
+    <p style="text-align: center; margin-top: 30%; font-size: xx-large;">{{loginTitle}}</p>
+  </div>
+</div>

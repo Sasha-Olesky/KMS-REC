@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="App">
+    <head>
+        <title>Streaming</title>
+
+        <meta name="google-signin-client_id" content="248206699018-oi3m4qk4v047hr6fm18ekiag4f6f12nh.apps.googleusercontent.com">
+        
+        <link rel="stylesheet" type="text/css" href="assets/css/app.css">
+
+        <!-- kurento js --> 
+        <link rel="shortcut icon" href="assets/img/kurento.png" type="image/png" />
+        <link rel="stylesheet"
+                href="assets/bower/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/bower/demo-console/index.css">
+        <link rel="stylesheet"
+                href="assets/bower/ekko-lightbox/dist/ekko-lightbox.min.css">
+        <link rel="stylesheet" href="assets/css/kurento.css">
+        <link rel="stylesheet" href="assets/css/custom.css">
+
+        <!-- google auth -->
+        <!-- // <script src="https://apis.google.com/js/platform.js" async defer></script> -->
+        
+
+        <script src="assets/bower/jquery/dist/jquery.min.js"></script>
+        <script src="assets/bower/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="assets/bower/demo-console/index.js"></script>
+        <script src="assets/bower/ekko-lightbox/dist/ekko-lightbox.min.js"></script>
+        <script src="assets/bower/ekko-lightbox/dist/ekko-lightbox.min.js"></script>
+        <script src="assets/bower/adapter.js/adapter.js"></script>
+        <script src="assets/bower/kurento-client/js/kurento-client.min.js"></script>
+        <script src="assets/bower/kurento-utils/js/kurento-utils.js"></script>
+
+	    <script type="text/javascript" src="assets/bower/angular/angular.js"></script>
+        <script type="text/javascript" src="assets/bower/angular-route/angular-route.min.js"></script>
+        <script type="text/javascript" src="assets/bower/angular-facebook/lib/angular-facebook.js"></script>
+
+    </head>
+
+    <body>
+        <div>
+            <ng-view></ng-view>
+        </div>
+
+        
+        <script type="text/javascript" src="app/app.js"></script>
+        <script type="text/javascript" src="app/config/config.js"></script>
+        <script type="text/javascript" src="app/routes/customerRoutes.js"></script>
+        <script type="text/javascript" src="app/services/customerFactory.js"></script>
+
+        <!-- Controllers -->
+        <script type="text/javascript" src="app/controllers/customerController.js"></script>
+        <script type="text/javascript" src="app/controllers/streamController.js"></script>
+        <script type="text/javascript" src="app/controllers/loginController.js"></script>
+        <script type="text/javascript" src="app/controllers/mainController.js"></script>
+
+
+        <!-- waiting indicator -->
+        <div loading-indicator class="waiting-box" style="position: absolute; margin-top: 20%;"><span><img src="http://intown.biz/demo/wait/waiting.gif" /></span></div>
+        
+
+    </body>
+
+</html>

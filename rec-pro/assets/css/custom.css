@@ -1,0 +1,121 @@
+.tabs-stacked .open>a:hover,.tabs-stacked .open>a:focus{border-color:#999999;}
+.tabbable{*zoom:1;}.tabbable:before,.tabbable:after{display:table;content:"";line-height:0;}
+.tabbable:after{clear:both;}
+.tab-content{overflow:auto;}
+.tabs-below>.nav-tabs,.tabs-right>.nav-tabs,.tabs-left>.nav-tabs{border-bottom:0;}
+.tab-content>.tab-pane,.pill-content>.pill-pane{display:none;}
+.tab-content>.active,.pill-content>.active{display:block;}
+
+.tabs-left>.nav-tabs>li,.tabs-right>.nav-tabs>li{float:none;}
+.tabs-left>.nav-tabs>li>a,.tabs-right>.nav-tabs>li>a{margin-right:0;margin-bottom:3px;}
+.tabs-left>.nav-tabs{float:left;margin-right:19px;border-right:1px solid #ddd;}
+.tabs-left>.nav-tabs>li>a{margin-right:-1px;-webkit-border-radius:4px 0 0 4px;-moz-border-radius:4px 0 0 4px;border-radius:4px 0 0 4px;}
+.tabs-left>.nav-tabs>li>a:hover,.tabs-left>.nav-tabs>li>a:focus{border-color:#eeeeee #dddddd #eeeeee #eeeeee;}
+.tabs-left>.nav-tabs .active>a,.tabs-left>.nav-tabs .active>a:hover,.tabs-left>.nav-tabs .active>a:focus{border-color:#ddd transparent #ddd #ddd;*border-right-color:#ffffff;}
+
+.tab-li {
+	height: 100px;
+}
+
+.tab-lable {
+	height: 100%;
+	color: #FFFFFF;
+}
+
+.tab-left-back {
+	background: #065E9B;
+}
+
+
+/* Shared */
+.loginBtn {
+  box-sizing: border-box;
+  position: relative;
+  /* width: 13em;  - apply for fixed size */
+  margin: 0.2em;
+  padding: 0 15px 0 46px;
+  border: none;
+  text-align: left;
+  line-height: 34px;
+  white-space: nowrap;
+  border-radius: 0.2em;
+  font-size: 16px;
+  color: #FFF;
+}
+.loginBtn:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 100%;
+}
+.loginBtn:focus {
+  outline: none;
+}
+.loginBtn:active {
+  box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+}
+
+
+/* Facebook */
+.loginBtn--facebook {
+  background-color: #4C69BA;
+  background-image: linear-gradient(#4C69BA, #3B55A0);
+  /*font-family: "Helvetica neue", Helvetica Neue, Helvetica, Arial, sans-serif;*/
+  text-shadow: 0 -1px 0 #354C8C;
+}
+.loginBtn--facebook:before {
+  border-right: #364e92 1px solid;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 6px 6px no-repeat;
+}
+.loginBtn--facebook:hover,
+.loginBtn--facebook:focus {
+  background-color: #5B7BD5;
+  background-image: linear-gradient(#5B7BD5, #4864B1);
+}
+
+
+/* Google */
+.loginBtn--google {
+  /*font-family: "Roboto", Roboto, arial, sans-serif;*/
+  background: #DD4B39;
+}
+.loginBtn--google:before {
+  border-right: #BB3F30 1px solid;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 6px 6px no-repeat;
+}
+.loginBtn--google:hover,
+.loginBtn--google:focus {
+  background: #E74B37;
+}
+
+.require-warning {
+  float: left;
+  color: #FF0000;
+}
+
+.waiting-box {
+    /*position: fixed;  fixed position so it doesn't scroll */
+    z-index: 9999; /* on top of everything else */
+    left: 50%;
+    top: 10px; /* displayed on the top of the page, just like Gmail's yellow info-box */  
+}
+
+.img-icon {
+  display: block;
+  margin: auto;
+}
+
+.p-title {
+  color: #EEEEEE;
+  font-size: -webkit-xxx-large;
+  margin-top: 30px;
+}
+
+.div-underline {
+  background: #EEEEEE;
+  width: 100%;
+  height: 1px;
+}
